@@ -202,7 +202,7 @@ export function HeroSection() {
   const expandedData = signalIcons.find(s => s.id === expandedSignal);
 
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-20 pb-12 md:pb-16 px-6 md:px-12 lg:px-16">
+    <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 md:px-12 lg:px-16">
       
       {/* Background Image */}
       <div 
@@ -232,7 +232,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-[32px] md:text-[44px] lg:text-[52px] font-bold leading-[1.15] text-[#2D2D2D] font-serif"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px] font-bold leading-[1.2] sm:leading-[1.15] text-[#2D2D2D] font-serif"
             >
               Stop Credit Shoppers From{" "}
               <span className="relative inline-block">
@@ -252,7 +252,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-[16px] md:text-[18px] text-[#666666] max-w-[90%] lg:max-w-[85%] font-sans leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-[#666666] max-w-full sm:max-w-[90%] lg:max-w-[85%] font-sans leading-relaxed"
             >
               LumiqAI embeds Consumer VantageScore 3.0, Business credit intelligence, deposit stability, and soft-prequal orchestration directly into Santander's digital channels—boosting funded conversions across auto, cards, and SMB lending.
             </motion.p>
@@ -317,10 +317,10 @@ export function HeroSection() {
               <Link to="/contact">
                 <Button 
                   size="lg" 
-                  className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold text-[16px] px-8 py-4 h-auto rounded-full transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group font-sans"
+                  className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-full transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group font-sans touch-manipulation w-full sm:w-auto"
                 >
                   Contact Sales
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
             </motion.div>
@@ -344,7 +344,7 @@ export function HeroSection() {
             className="flex flex-col items-center gap-8"
           >
             {/* Fundability Gauge Card */}
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-lg w-full max-w-sm">
+            <div className="bg-white border-2 border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg w-full max-w-sm mx-auto">
               <FundabilityGauge hoveredSignal={hoveredSignal} />
             </div>
 

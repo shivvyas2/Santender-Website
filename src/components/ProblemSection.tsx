@@ -212,8 +212,8 @@ export function ProblemSection() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-white py-16 md:py-24">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section ref={sectionRef} className="w-full bg-white py-12 sm:py-16 md:py-24">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
         {/* Section Label */}
         <motion.div
@@ -234,7 +234,7 @@ export function ProblemSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center mb-12"
         >
-          <h2 className="text-[#2D2D2D] font-serif leading-[1.2] text-3xl md:text-4xl lg:text-[44px]">
+          <h2 className="text-[#2D2D2D] font-serif leading-[1.2] text-2xl sm:text-3xl md:text-4xl lg:text-[44px]">
             Santander educates borrowers on credit — then{" "}
             <span className="relative inline-block">
               <span className="relative z-10">loses them</span>

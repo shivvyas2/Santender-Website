@@ -31,19 +31,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       {/* Main header row */}
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-1.5 sm:gap-2">
             <div className="flex items-center">
               {/* Santander flame icon */}
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-8 sm:h-8">
                 <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2z" fill="#EC0000"/>
                 <path d="M16 6c-1.5 3-1 5 0 7 1 2 2 4 0 7 3-2 4-5 3-8-.5-2-2-4-3-6z" fill="white"/>
                 <path d="M12 8c-1 2.5-.5 4.5.5 6 1 1.5 1.5 3 0 5.5 2.5-1.5 3-4 2.5-6-.3-1.5-1.5-3.5-3-5.5z" fill="white"/>
                 <path d="M20 8c1 2.5.5 4.5-.5 6-1 1.5-1.5 3 0 5.5-2.5-1.5-3-4-2.5-6 .3-1.5 1.5-3.5 3-5.5z" fill="white"/>
               </svg>
-              <span className="ml-2 text-xl font-semibold text-[#2D2D2D] font-sans">
+              <span className="ml-1.5 sm:ml-2 text-base sm:text-xl font-semibold text-[#2D2D2D] font-sans">
                 <span className="text-[#EC0000]">Santander</span> × LumiqAI
               </span>
             </div>
@@ -78,9 +78,10 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#444444] hover:text-[#EC0000] transition-colors"
+            className="lg:hidden p-2 -mr-2 text-[#444444] hover:text-[#EC0000] transition-colors touch-manipulation"
+            aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </button>
         </div>
       </div>
@@ -95,14 +96,14 @@ export function Header() {
             transition={{ duration: 0.2 }}
             className="lg:hidden overflow-hidden bg-white border-t border-gray-200"
           >
-            <nav className="px-6 py-4 space-y-2">
+            <nav className="px-4 sm:px-6 py-4 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   to={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`
-                    block py-3 text-base font-medium border-b border-gray-100
+                    block py-3 px-2 text-base font-medium border-b border-gray-100 touch-manipulation
                     ${isActive(item.href) ? 'text-[#EC0000]' : 'text-[#444444]'}
                   `}
                 >
@@ -112,7 +113,7 @@ export function Header() {
               <Link 
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block w-full mt-4 px-5 py-3 rounded-full bg-[#EC0000] text-white text-center text-sm font-semibold"
+                className="block w-full mt-4 mx-2 px-5 py-3.5 rounded-full bg-[#EC0000] text-white text-center text-sm font-semibold touch-manipulation"
               >
                 Contact Sales
               </Link>

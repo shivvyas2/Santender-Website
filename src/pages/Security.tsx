@@ -42,7 +42,7 @@ export default function Security() {
       <div className="min-h-screen bg-white">
         
         {/* HERO SECTION */}
-        <section className="py-24 lg:py-32 relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden">
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center"
@@ -50,37 +50,37 @@ export default function Security() {
           />
           {/* White overlay */}
           <div className="absolute inset-0 bg-white/85" />
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div {...fadeInUp} className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EC0000]/5 border border-[#EC0000]/20 mb-8">
-                <Shield className="w-4 h-4 text-[#EC0000]" />
-                <span className="text-sm font-bold text-[#EC0000] uppercase tracking-wider">Security & Compliance</span>
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#EC0000]/5 border border-[#EC0000]/20 mb-6 sm:mb-8">
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-[#EC0000]" />
+                <span className="text-xs sm:text-sm font-bold text-[#EC0000] uppercase tracking-wider">Security & Compliance</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D2D2D] mb-6 leading-tight font-serif">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2D2D2D] mb-4 sm:mb-6 leading-tight font-serif">
                 Bank-Grade Security.{" "}
                 <span className="text-[#EC0000]">Built for Fintech Velocity.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-[#666666] leading-relaxed mb-10 max-w-3xl font-sans">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#666666] leading-relaxed mb-6 sm:mb-10 max-w-3xl font-sans">
                 Designed to exceed Santander's risk, data, and compliance standards — LumiqAI offers end-to-end protection, AI transparency, and enterprise-grade governance for SMB lending.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <a href="https://docs.futeurcredx.com/" target="_blank" rel="noopener noreferrer">
                   <Button 
                     size="lg" 
-                    className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold px-8 py-6 text-lg rounded-full"
+                    className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full touch-manipulation w-full sm:w-auto"
                   >
                     View API Docs
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </a>
                 <Link to="/contact">
                   <Button 
                     size="lg" 
                     variant="outline"
-                    className="border-2 border-gray-300 text-[#2D2D2D] bg-white hover:bg-white hover:border-[#EC0000] hover:text-[#EC0000] font-semibold px-8 py-6 text-lg rounded-full"
+                    className="border-2 border-gray-300 text-[#2D2D2D] bg-white hover:bg-white hover:border-[#EC0000] hover:text-[#EC0000] font-semibold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full touch-manipulation w-full sm:w-auto"
                   >
                     Contact Sales
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </Link>
               </div>
@@ -89,8 +89,8 @@ export default function Security() {
         </section>
 
         {/* COMPLIANCE FRAMEWORK BANNER */}
-        <section className="py-16 bg-[#F7F7F7] border-y border-gray-200">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-16 bg-[#F7F7F7] border-y border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center mb-10">
               <p className="text-sm font-bold text-[#EC0000] uppercase tracking-wider mb-2">Aligned With</p>
               <h2 className="text-2xl md:text-3xl font-bold text-[#2D2D2D] font-serif">
@@ -119,10 +119,10 @@ export default function Security() {
         </section>
 
         {/* DATA GOVERNANCE & CREDIT SCORE INTEGRITY */}
-        <section className="py-24 lg:py-32 bg-white">
-          <div className="container mx-auto px-6">
-            <motion.div {...fadeInUp} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D2D2D] mb-4 font-serif">
+        <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-white">
+          <div className="container mx-auto px-4 sm:px-6">
+            <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D2D2D] mb-4 font-serif">
                 Data Governance & <span className="text-[#EC0000]">Credit Integrity</span>
               </h2>
             </motion.div>

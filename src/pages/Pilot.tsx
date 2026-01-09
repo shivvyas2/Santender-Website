@@ -169,7 +169,7 @@ export default function Pilot() {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -178,31 +178,31 @@ export default function Pilot() {
         {/* White overlay */}
         <div className="absolute inset-0 bg-white/75" />
         
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-[#EC0000]/10 text-[#EC0000] border-[#EC0000]/20 px-4 py-2">
+            <Badge className="mb-4 sm:mb-6 bg-[#EC0000]/10 text-[#EC0000] border-[#EC0000]/20 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm">
               SANTANDER PILOT PROGRAM
             </Badge>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#2D2D2D] leading-tight font-serif">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-[#2D2D2D] leading-tight font-serif px-2">
               Install the Credit Intelligence Layer in{" "}
               <span className="text-[#EC0000]">90 Days</span>
             </h1>
             
-            <p className="text-base md:text-lg text-[#666666] mb-4 max-w-3xl mx-auto font-sans">
+            <p className="text-sm sm:text-base md:text-lg text-[#666666] mb-3 sm:mb-4 max-w-3xl mx-auto font-sans px-2">
               Close Santander's structural gap. Capture revenue currently leaking to Chase, Capital One, AmEx, and Apple.
             </p>
             
-            <p className="text-sm text-[#666666] mb-8 max-w-2xl mx-auto font-sans">
+            <p className="text-xs sm:text-sm text-[#666666] mb-6 sm:mb-8 max-w-2xl mx-auto font-sans px-2">
               Deploy a fully governed, risk-aligned credit intelligence layer directly inside the Santander App. 
               This pilot is designed to produce <span className="text-[#EC0000] font-medium">measurable revenue uplift within the first 60–90 days</span> of deployment.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
               <Link to="/contact">
                 <Button 
                   size="lg" 
-                  className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold rounded-full"
+                  className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold rounded-full text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 touch-manipulation w-full sm:w-auto"
                 >
                   Contact Sales
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -214,8 +214,8 @@ export default function Pilot() {
       </section>
 
       {/* Section 1 - Why This Pilot Matters Now */}
-      <section className="py-16 bg-[#F7F7F7]">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-[#F7F7F7]">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="mb-10">
             <div className="text-xs font-bold text-[#EC0000] tracking-wider mb-2">01 — WHY THIS PILOT MATTERS NOW</div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#2D2D2D] mb-4 font-serif">

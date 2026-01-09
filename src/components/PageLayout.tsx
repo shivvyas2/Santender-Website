@@ -20,7 +20,7 @@ export function PageLayout({ children }: PageLayoutProps) {
 
       <Header />
       
-      <main className="relative">
+      <main className="relative overflow-x-hidden">
         {children}
       </main>
 

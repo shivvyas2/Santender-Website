@@ -23,13 +23,13 @@ export function Footer() {
   return (
     <footer className="bg-[#1a1f2e] text-white">
       {/* Top branding section */}
-      <div className="border-b border-white/10 py-16">
-        <div className="mx-auto max-w-7xl px-6 text-center">
-          <img src={lumiqLogoWhite} alt="LumiqAI" className="h-12 mx-auto mb-4" />
-          <p className="text-gray-400 text-sm mb-4">
+      <div className="border-b border-white/10 py-8 sm:py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
+          <img src={lumiqLogoWhite} alt="LumiqAI" className="h-10 sm:h-12 mx-auto mb-3 sm:mb-4" />
+          <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
             Powered by FuteurCredX
           </p>
-          <p className="text-gray-400 text-sm max-w-xl mx-auto mb-6">
+          <p className="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto mb-4 sm:mb-6 px-2">
             LumiqAI™ powers readiness scoring, unlock paths, and sponsor-safe exposure decisions for fundability infrastructure.
           </p>
           <div className="flex items-center justify-center gap-2">
@@ -41,8 +41,8 @@ export function Footer() {
       </div>
 
       {/* Links section */}
-      <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-16">
           {/* Documents column */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6">
@@ -125,8 +125,8 @@ export function Footer() {
       </div>
 
       {/* Bottom dark section */}
-      <div className="bg-[#0f1218] py-10">
-        <div className="mx-auto max-w-7xl px-6">
+      <div className="bg-[#0f1218] py-6 sm:py-8 md:py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="text-xl font-bold tracking-wider mb-2">FUTEURCREDX</h2>
           <p className="text-gray-500 text-sm mb-6">© FUTEURCREDX {new Date().getFullYear()}</p>
           

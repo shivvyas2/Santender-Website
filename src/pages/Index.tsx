@@ -160,45 +160,45 @@ function Index() {
       <ProblemSection />
 
       {/* Leakage Section */}
-      <section className="py-24 lg:py-32 bg-[#F7F7F7]">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-[#F7F7F7]">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EC0000]/10 border border-[#EC0000]/20 mb-8">
               <TrendingUp className="w-4 h-4 text-[#EC0000]" />
               <span className="text-sm font-bold text-[#EC0000] uppercase tracking-wider">Leakage Economics</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-6 leading-tight font-serif">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-6 leading-tight font-serif">
               Borrowers shop credit first. Santander captures loans{" "}
               <span className="text-[#EC0000]">last</span>—after competitors already win.
             </h2>
           </motion.div>
 
           {/* Industry Stats */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-3xl mx-auto mb-10 sm:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center p-8 rounded-2xl bg-white border border-gray-200 shadow-sm"
+              className="text-center p-4 sm:p-6 md:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm"
             >
-              <div className="text-5xl font-black text-[#EC0000] mb-2">45%</div>
-              <p className="text-[#666666]">of auto borrowers research financing before purchase</p>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#EC0000] mb-2">45%</div>
+              <p className="text-sm sm:text-base text-[#666666]">of auto borrowers research financing before purchase</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-center p-8 rounded-2xl bg-white border border-gray-200 shadow-sm"
+              className="text-center p-4 sm:p-6 md:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm"
             >
-              <div className="text-5xl font-black text-[#EC0000] mb-2">60%</div>
-              <p className="text-[#666666]">of digital shoppers complete a pre-approval step before applying</p>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#EC0000] mb-2">60%</div>
+              <p className="text-sm sm:text-base text-[#666666]">of digital shoppers complete a pre-approval step before applying</p>
             </motion.div>
           </div>
 
           {/* Leakage Math */}
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto mb-16">
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 md:p-12 shadow-sm">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto mb-10 sm:mb-16">
+            <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 md:p-8 lg:p-12 shadow-sm">
               <h3 className="text-2xl font-bold text-[#2D2D2D] mb-8 text-center font-serif">Leakage Math</h3>
               <div className="space-y-4">
                 {[
@@ -251,15 +251,15 @@ function Index() {
       </section>
 
       {/* Solution - WITH vs WITHOUT */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-4 font-serif">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-4 font-serif">
               Two realities. One leaks. <span className="text-[#EC0000]">One converts.</span>
             </h2>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
             {/* WITHOUT LumiqAI */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -272,7 +272,7 @@ function Index() {
                 Without LumiqAI
               </div>
               <Card className="h-full bg-[#F7F7F7] border border-gray-200 overflow-hidden shadow-sm">
-                <CardContent className="p-8 pt-12">
+                <CardContent className="p-4 sm:p-6 md:p-8 pt-10 sm:pt-12">
                   <div className="aspect-[9/16] max-w-xs mx-auto rounded-2xl bg-gradient-to-b from-gray-200 to-gray-100 border border-gray-300 mb-8 flex items-center justify-center">
                     <p className="text-[#666666] text-sm">Current Santander App</p>
                   </div>
@@ -306,7 +306,7 @@ function Index() {
                 With LumiqAI
               </div>
               <Card className="h-full bg-white border border-[#EC0000]/30 overflow-hidden shadow-sm">
-                <CardContent className="p-8 pt-12">
+                <CardContent className="p-4 sm:p-6 md:p-8 pt-10 sm:pt-12">
                   <div className="aspect-[9/16] max-w-xs mx-auto rounded-2xl bg-gradient-to-b from-[#EC0000]/10 to-[#EC0000]/5 border border-[#EC0000]/20 mb-8 flex items-center justify-center">
                     <p className="text-[#EC0000] text-sm">LumiqAI Mockup</p>
                   </div>
@@ -340,15 +340,15 @@ function Index() {
       </section>
 
       {/* Security & Compliance */}
-      <section className="py-24 lg:py-32 bg-[#F7F7F7]">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-[#F7F7F7]">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-4 font-serif">
               Built for <span className="text-[#EC0000]">regulated banking</span> environments.
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto mb-10 sm:mb-16">
             {[
               { icon: Lock, title: "Encryption in transit & at rest" },
               { icon: Shield, title: "RBAC + audit logs" },
@@ -363,11 +363,11 @@ function Index() {
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
               >
                 <Card className="h-full bg-white border border-gray-200 hover:border-[#EC0000]/30 transition-all duration-300 shadow-sm">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-xl bg-[#EC0000]/10 flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="w-6 h-6 text-[#EC0000]" />
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#EC0000]/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                      <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#EC0000]" />
                     </div>
-                    <p className="text-[#666666] font-medium">{item.title}</p>
+                    <p className="text-xs sm:text-sm text-[#666666] font-medium">{item.title}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -386,15 +386,15 @@ function Index() {
       </section>
 
       {/* Outcomes Section */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-4 font-serif">
               What Santander gains in <span className="text-[#EC0000]">90 days.</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-10 sm:mb-16">
             {[
               { icon: CreditCard, title: "Auto Lending", value: "+34%", desc: "lead volume via AutoFi" },
               { icon: BarChart3, title: "Consumer Cards", value: "30–40%", desc: "lift when credit is surfaced natively (vs 0 internal score panel today)" },
@@ -410,13 +410,13 @@ function Index() {
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
               >
                 <Card className="h-full bg-white border border-gray-200 hover:border-[#EC0000]/50 transition-all duration-300 group shadow-sm">
-                  <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-xl bg-[#EC0000]/10 flex items-center justify-center mb-4 group-hover:bg-[#EC0000]/20 transition-colors">
-                      <item.icon className="w-6 h-6 text-[#EC0000]" />
+                  <CardContent className="p-4 sm:p-6 md:p-8">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#EC0000]/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-[#EC0000]/20 transition-colors">
+                      <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#EC0000]" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#2D2D2D] mb-2">{item.title}</h3>
-                    <div className="text-3xl font-black text-[#EC0000] mb-2">{item.value}</div>
-                    <p className="text-[#666666] text-sm">{item.desc}</p>
+                    <h3 className="text-base sm:text-lg font-bold text-[#2D2D2D] mb-2">{item.title}</h3>
+                    <div className="text-2xl sm:text-3xl font-black text-[#EC0000] mb-2">{item.value}</div>
+                    <p className="text-[#666666] text-xs sm:text-sm">{item.desc}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -438,26 +438,26 @@ function Index() {
       </section>
 
       {/* CTA Section */}
-      <section id="cta" className="py-24 lg:py-32 bg-[#F7F7F7]">
-        <div className="container mx-auto px-6">
+      <section id="cta" className="py-12 sm:py-16 md:py-24 lg:py-32 bg-[#F7F7F7]">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-6 font-serif">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-4 sm:mb-6 font-serif">
               Recapture borrowers. Reduce leakage.{" "}
               <span className="text-[#EC0000]">Convert bank-wide.</span>
             </h2>
 
-            <p className="text-lg text-[#666666] mb-10 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-[#666666] mb-6 sm:mb-10 max-w-2xl mx-auto">
               Dedicated Implementation Owner. 2-week integration. 90-day pilot. 48-hour docs delivery. <span className="text-[#EC0000] font-semibold">No failure modes.</span>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link to="/pilot">
-                <Button size="lg" className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-bold text-lg px-10 py-7 rounded-xl group">
+                <Button size="lg" className="bg-[#EC0000] hover:bg-[#CC0000] text-white font-bold text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 rounded-xl group touch-manipulation w-full sm:w-auto">
                   Book 20 Minutes
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="text-lg px-10 py-7 rounded-xl border-gray-300 text-[#2D2D2D] hover:bg-white hover:border-[#EC0000]/50">
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 rounded-xl border-gray-300 text-[#2D2D2D] hover:bg-white hover:border-[#EC0000]/50 touch-manipulation w-full sm:w-auto">
                 Send Audit PDF
               </Button>
             </div>
@@ -466,7 +466,7 @@ function Index() {
       </section>
 
       {/* Plaid-Inspired Contact Form Section */}
-      <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
+      <section id="contact" className="relative py-12 sm:py-16 md:py-24 lg:py-32 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -475,18 +475,18 @@ function Index() {
         {/* White overlay for fading effect */}
         <div className="absolute inset-0 bg-white/85" />
         
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-2xl mx-auto">
             {/* Form */}
             <motion.div {...fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-black text-[#2D2D2D] mb-4 font-serif text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#2D2D2D] mb-4 font-serif text-center">
                 Contact Sales
               </h2>
-              <p className="text-[#666666] mb-8 text-center">
+              <p className="text-sm sm:text-base text-[#666666] mb-6 sm:mb-8 text-center">
                 Ready to transform your credit journey? Reach out to our team and we'll be in touch.
               </p>
               
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl border border-gray-200 p-8 shadow-lg">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl border border-gray-200 p-4 sm:p-6 md:p-8 shadow-lg">
                 <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input
@@ -527,7 +527,7 @@ function Index() {
                   
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-between px-6 py-4 bg-[#EC0000] text-white font-semibold rounded-lg hover:bg-[#CC0000] transition-colors group"
+                    className="w-full flex items-center justify-between px-6 py-4 bg-[#EC0000] text-white font-semibold rounded-lg hover:bg-[#CC0000] transition-colors group touch-manipulation min-h-[48px]"
                   >
                     <span>Submit</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
