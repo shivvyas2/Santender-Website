@@ -362,7 +362,7 @@ export default function CaseStudy() {
                 </Link>
                 <Button 
                   variant="outline" 
-                  className="h-14 px-8 border-[#2D2D2D] text-[#2D2D2D] hover:bg-[#2D2D2D] hover:text-white font-semibold text-base rounded-lg"
+                  className="h-14 px-8 border-[#2D2D2D] bg-[#2D2D2D] text-white hover:bg-[#2D2D2D]/90 hover:text-white font-semibold text-base rounded-lg"
                 >
                   Download Full Case Study
                 </Button>
@@ -481,19 +481,40 @@ export default function CaseStudy() {
               {/* The Gap */}
               <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
                 <Card className="h-full bg-red-50 border-2 border-red-200">
-                  <CardContent className="p-8">
-                    <div className="flex items-center gap-2 mb-6">
+                  <CardContent className="p-6 sm:p-8">
+                    <div className="flex items-center gap-2 mb-4">
                       <AlertTriangle className="h-5 w-5 text-red-600" />
                       <span className="text-red-600 text-xs font-bold tracking-[0.2em] uppercase">The Gap</span>
                     </div>
-                    <ul className="space-y-4">
+                    
+                    {/* Phone mockups showing current state */}
+                    <div className="flex justify-center gap-2 sm:gap-3 mb-6">
+                      <div className="flex flex-col items-center">
+                        <img 
+                          src="/2.png"
+                          alt="Consumer app - no credit visibility"
+                          className="w-20 sm:w-24 h-auto drop-shadow-lg"
+                        />
+                        <p className="text-xs text-red-500 mt-2 font-medium">Consumer</p>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <img 
+                          src="/Santander Screenshots/Case Study/The Missing Credit Visibility Loop in Cards & SMB/The GAP/Without LumiqAI/business.png"
+                          alt="Business app - no credit visibility"
+                          className="w-20 sm:w-24 h-auto drop-shadow-lg"
+                        />
+                        <p className="text-xs text-red-500 mt-2 font-medium">Business</p>
+                      </div>
+                    </div>
+                    
+                    <ul className="space-y-3">
                       {[
                         "SC does not offer a Credit Journey-style feature like competitors",
                         "Customers are educated about credit → then exit SC apps to check eligibility elsewhere",
                         "SC has no in-app answer when users think: \"Am I eligible?\""
                       ].map((item, index) => (
-                        <li key={index} className="flex items-start gap-3 text-[#666666] font-sans">
-                          <XCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
+                        <li key={index} className="flex items-start gap-3 text-[#666666] font-sans text-sm">
+                          <XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -674,7 +695,7 @@ export default function CaseStudy() {
                   Request Pilot Program
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-gray-300 text-[#2D2D2D] hover:border-[#EC0000] hover:text-[#EC0000] font-semibold px-10 py-6 text-lg rounded-full">
+                <Button size="lg" variant="outline" className="border-2 border-[#2D2D2D] bg-[#2D2D2D] text-white hover:bg-[#2D2D2D]/90 hover:text-white font-semibold px-10 py-6 text-lg rounded-full">
                   Download Full Analysis
                 </Button>
               </div>

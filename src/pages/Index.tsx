@@ -251,10 +251,10 @@ function Index() {
       </section>
 
       {/* Solution - WITH vs WITHOUT */}
-      <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-4 font-serif">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2D2D2D] mb-4 font-serif px-2">
               Two realities. One leaks. <span className="text-[#EC0000]">One converts.</span>
             </h2>
           </motion.div>
@@ -265,18 +265,33 @@ function Index() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative min-w-0"
             >
-              <div className="absolute -top-4 left-4 px-4 py-2 rounded-full bg-gray-100 border border-gray-300 text-[#666666] text-sm font-bold flex items-center gap-2 z-10">
-                <EyeOff className="w-4 h-4" />
+              <div className="absolute -top-3 sm:-top-4 left-2 sm:left-4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gray-100 border border-gray-300 text-[#666666] text-xs sm:text-sm font-bold flex items-center gap-1.5 sm:gap-2 z-10 whitespace-nowrap">
+                <EyeOff className="w-3 h-3 sm:w-4 sm:h-4" />
                 Without LumiqAI
               </div>
               <Card className="h-full bg-[#F7F7F7] border border-gray-200 overflow-hidden shadow-sm">
-                <CardContent className="p-4 sm:p-6 md:p-8 pt-10 sm:pt-12">
-                  <div className="aspect-[9/16] max-w-xs mx-auto rounded-2xl bg-gradient-to-b from-gray-200 to-gray-100 border border-gray-300 mb-8 flex items-center justify-center">
-                    <p className="text-[#666666] text-sm">Current Santander App</p>
+                <CardContent className="p-4 sm:p-6 md:p-8 pt-8 sm:pt-10 md:pt-12">
+                  <div className="flex justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 overflow-hidden">
+                    <div className="flex flex-col items-center min-w-0 flex-1">
+                      <img 
+                        src="/2.png"
+                        alt="Consumer app without LumiqAI"
+                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                      />
+                      <p className="text-xs text-[#666666] mt-2 text-center">Consumer</p>
+                    </div>
+                    <div className="flex flex-col items-center min-w-0 flex-1">
+                      <img 
+                        src="/Santander Screenshots/Main Screen/Two Realities/Without LumiqAI/business.png"
+                        alt="Business app without LumiqAI"
+                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                      />
+                      <p className="text-xs text-[#666666] mt-2 text-center">Business</p>
+                    </div>
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {[
                       "No unified credit readiness view",
                       "No persistent consumer score monitoring",
@@ -284,9 +299,9 @@ function Index() {
                       "No deposit-based offer carousel",
                       "No in-app product recommendations"
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-white border border-gray-200">
-                        <X className="w-5 h-5 text-red-500 flex-shrink-0" />
-                        <span className="text-[#666666]">{item}</span>
+                      <div key={idx} className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg bg-white border border-gray-200">
+                        <X className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-xs sm:text-sm text-[#666666] break-words">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -299,30 +314,45 @@ function Index() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative min-w-0"
             >
-              <div className="absolute -top-4 left-4 px-4 py-2 rounded-full bg-[#EC0000]/10 border border-[#EC0000]/40 text-[#EC0000] text-sm font-bold flex items-center gap-2 z-10">
-                <Eye className="w-4 h-4" />
+              <div className="absolute -top-3 sm:-top-4 left-2 sm:left-4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#EC0000]/10 border border-[#EC0000]/40 text-[#EC0000] text-xs sm:text-sm font-bold flex items-center gap-1.5 sm:gap-2 z-10 whitespace-nowrap">
+                <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
                 With LumiqAI
               </div>
               <Card className="h-full bg-white border border-[#EC0000]/30 overflow-hidden shadow-sm">
-                <CardContent className="p-4 sm:p-6 md:p-8 pt-10 sm:pt-12">
-                  <div className="aspect-[9/16] max-w-xs mx-auto rounded-2xl bg-gradient-to-b from-[#EC0000]/10 to-[#EC0000]/5 border border-[#EC0000]/20 mb-8 flex items-center justify-center">
-                    <p className="text-[#EC0000] text-sm">LumiqAI Mockup</p>
+                <CardContent className="p-4 sm:p-6 md:p-8 pt-8 sm:pt-10 md:pt-12">
+                  <div className="flex justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 overflow-hidden">
+                    <div className="flex flex-col items-center min-w-0 flex-1">
+                      <img 
+                        src="/Santander Screenshots/Main Screen/Two Realities/With Lumiq AI/Consumer.png"
+                        alt="Consumer app with LumiqAI"
+                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                      />
+                      <p className="text-xs text-[#EC0000] mt-2 font-medium text-center">Consumer</p>
+                    </div>
+                    <div className="flex flex-col items-center min-w-0 flex-1">
+                      <img 
+                        src="/Santander Screenshots/Main Screen/Two Realities/With Lumiq AI/Business.png"
+                        alt="Business app with LumiqAI"
+                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                      />
+                      <p className="text-xs text-[#EC0000] mt-2 font-medium text-center">Business</p>
+                    </div>
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {[
                       { title: "Consumer Credit Panel", desc: "VantageScore 3.0 visible in-app, monitored monthly, with utilization trend lines, alerts, and 'next best actions' surfaced before product pathing." },
                       { title: "Business Credit Panel", desc: "D&B + Experian Biz + SAM.gov UEI registry completeness, tradeline health, and file completeness indicators." },
                       { title: "Eligibility Carousel", desc: "Uses deposit behavior + bureau scores + registry signals to surface pre-approved offers for Business LOC, Term loans, SBA 7(a)/504, Equipment financing." },
                       { title: "Instant Prequal Orchestration", desc: "Soft pull with consent, eligibility predicted before routing into lender engines like AutoFi." }
                     ].map((item, idx) => (
-                      <div key={idx} className="p-4 rounded-xl bg-[#EC0000]/5 border border-[#EC0000]/20">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Check className="w-5 h-5 text-[#EC0000]" />
-                          <span className="font-bold text-[#2D2D2D]">{item.title}</span>
+                      <div key={idx} className="p-3 sm:p-4 rounded-xl bg-[#EC0000]/5 border border-[#EC0000]/20">
+                        <div className="flex items-start gap-2 mb-2">
+                          <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#EC0000] flex-shrink-0 mt-0.5" />
+                          <span className="font-bold text-sm sm:text-base text-[#2D2D2D] break-words">{item.title}</span>
                         </div>
-                        <p className="text-[#666666] text-sm pl-7">{item.desc}</p>
+                        <p className="text-xs sm:text-sm text-[#666666] pl-6 sm:pl-7 break-words leading-relaxed">{item.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -331,8 +361,8 @@ function Index() {
             </motion.div>
           </div>
 
-          <motion.div {...fadeInUp} className="text-center mt-16 mb-4">
-            <p className="text-3xl md:text-4xl lg:text-5xl text-[#2D2D2D] font-bold font-serif leading-tight">
+          <motion.div {...fadeInUp} className="text-center mt-10 sm:mt-16 mb-4 px-4">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-[#2D2D2D] font-bold font-serif leading-tight break-words">
               AutoFi executes. <span className="text-[#EC0000]">LumiqAI ensures Santander wins before execution.</span>
             </p>
           </motion.div>
@@ -457,7 +487,7 @@ function Index() {
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 rounded-xl border-gray-300 text-[#2D2D2D] hover:bg-white hover:border-[#EC0000]/50 touch-manipulation w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 rounded-xl border-[#2D2D2D] bg-[#2D2D2D] text-white hover:bg-[#2D2D2D]/90 hover:text-white touch-manipulation w-full sm:w-auto">
                 Send Audit PDF
               </Button>
             </div>

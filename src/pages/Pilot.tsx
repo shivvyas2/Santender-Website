@@ -284,8 +284,24 @@ export default function Pilot() {
                   </div>
                 </div>
                 
-                <div className="h-40 bg-[#F7F7F7] flex items-center justify-center border-b border-gray-200">
-                  <p className="text-[#999999] text-sm font-sans">[Consumer Journey Mockup]</p>
+                <div className="border-b border-gray-200 overflow-hidden">
+                  <div className="flex justify-center gap-1 sm:gap-2 p-3 sm:p-4">
+                    <img 
+                      src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Consumer Pilot Scope/1.png"
+                      alt="Consumer pilot screen 1"
+                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                    />
+                    <img 
+                      src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Consumer Pilot Scope/2.png"
+                      alt="Consumer pilot screen 2"
+                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                    />
+                    <img 
+                      src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Consumer Pilot Scope/3.png"
+                      alt="Consumer pilot screen 3"
+                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                    />
+                  </div>
                 </div>
                 
                 <CardContent className="p-6">
@@ -324,8 +340,24 @@ export default function Pilot() {
                   </div>
                 </div>
                 
-                <div className="h-40 bg-blue-50/50 flex items-center justify-center border-b border-blue-100">
-                  <p className="text-[#999999] text-sm font-sans">[Business Journey Mockup]</p>
+                <div className="border-b border-blue-100 overflow-hidden">
+                  <div className="flex justify-center gap-1 sm:gap-2 p-3 sm:p-4">
+                    <img 
+                      src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Business Pilot Scope/1.png"
+                      alt="Business pilot screen 1"
+                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                    />
+                    <img 
+                      src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Business Pilot Scope/2.png"
+                      alt="Business pilot screen 2"
+                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                    />
+                    <img 
+                      src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Business Pilot Scope/3.png"
+                      alt="Business pilot screen 3"
+                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                    />
+                  </div>
                 </div>
                 
                 <CardContent className="p-6">
@@ -926,7 +958,7 @@ export default function Pilot() {
                   </div>
                   <Button 
                     variant="outline" 
-                    className="mt-6 w-full border-gray-300 text-[#2D2D2D] hover:border-[#EC0000] hover:text-[#EC0000]"
+                    className="mt-6 w-full border-[#2D2D2D] bg-[#2D2D2D] text-white hover:bg-[#2D2D2D]/90 hover:text-white"
                   >
                     <FileCheck className="h-4 w-4 mr-2" />
                     View Tech Stack Summary PDF

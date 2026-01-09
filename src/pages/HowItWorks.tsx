@@ -1006,7 +1006,7 @@ export default function HowItWorks() {
 
                         {/* Footer */}
                         <div className="bg-gray-900 px-4 py-2 flex items-center justify-center gap-2">
-                          <span className="text-gray-400 text-xs">Powered by</span>
+                          <span className="text-white text-xs">Powered by</span>
                           <span className="text-white font-semibold text-xs">LumiqAI</span>
                         </div>
                       </div>
@@ -1074,49 +1074,33 @@ export default function HowItWorks() {
                       Without LumiqAI
                     </h3>
                     <div className="bg-red-50 rounded-2xl border border-red-200 p-6 h-full">
-                      <div className="bg-white rounded-xl p-4 mb-6 border-2 border-dashed border-red-200">
-                        <p className="font-sans text-sm text-red-400 text-center mb-3">Current experience</p>
-                        <div className="flex justify-center gap-6">
+                      <div className="mb-6">
+                        <p className="font-sans text-sm text-red-400 text-center mb-4">Current experience</p>
+                        <div className="flex justify-center gap-3 sm:gap-4">
                           {/* Consumer iPhone Mockup */}
-                          <div className="flex flex-col items-center flex-1 max-w-[180px]">
-                            <div className="relative w-full">
-                              {/* iPhone Frame */}
-                              <div className="relative bg-gray-900 rounded-[24px] p-2 shadow-2xl">
-                                {/* Notch */}
-                                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-gray-900 rounded-b-2xl z-10"></div>
-                                {/* Screen */}
-                                <div className="rounded-[18px] overflow-hidden bg-white aspect-[9/19.5]">
-                                  <img 
-                                    src={consumerAppScreenshot} 
-                                    alt="Consumer banking app - single balance" 
-                                    className="w-full h-full object-cover object-top"
-                                  />
-                                </div>
-                              </div>
+                          <div className="flex flex-col items-center flex-1 max-w-[140px] sm:max-w-[160px]">
+                            <div className="w-full h-[280px] sm:h-[320px] flex items-center justify-center">
+                              <img 
+                                src="/2.png"
+                                alt="Consumer banking app - single balance" 
+                                className="w-full h-full object-contain drop-shadow-lg"
+                              />
                             </div>
-                            <p className="text-sm text-gray-600 mt-3 font-semibold">Consumer</p>
-                            <p className="text-xs text-red-500">1 balance shown</p>
+                            <p className="text-sm text-gray-600 mt-3 font-semibold text-center">Consumer</p>
+                            <p className="text-xs text-red-500 text-center">1 balance shown</p>
                           </div>
                           
                           {/* Business iPhone Mockup */}
-                          <div className="flex flex-col items-center flex-1 max-w-[180px]">
-                            <div className="relative w-full">
-                              {/* iPhone Frame */}
-                              <div className="relative bg-gray-900 rounded-[24px] p-2 shadow-2xl">
-                                {/* Notch */}
-                                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-gray-900 rounded-b-2xl z-10"></div>
-                                {/* Screen */}
-                                <div className="rounded-[18px] overflow-hidden bg-white aspect-[9/19.5]">
-                                  <img 
-                                    src={businessAppScreenshot} 
-                                    alt="Business banking app - 3 balances" 
-                                    className="w-full h-full object-cover object-top"
-                                  />
-                                </div>
-                              </div>
+                          <div className="flex flex-col items-center flex-1 max-w-[140px] sm:max-w-[160px]">
+                            <div className="w-full h-[280px] sm:h-[320px] flex items-center justify-center">
+                              <img 
+                                src="/Santander Screenshots/How it Works/Deployment Flow — How a Customer /Without LumiqAI/business.png"
+                                alt="Business banking app - 3 balances" 
+                                className="w-full h-full object-contain drop-shadow-lg"
+                              />
                             </div>
-                            <p className="text-sm text-gray-600 mt-3 font-semibold">Business</p>
-                            <p className="text-xs text-red-500">3 balances shown</p>
+                            <p className="text-sm text-gray-600 mt-3 font-semibold text-center">Business</p>
+                            <p className="text-xs text-red-500 text-center">3 balances shown</p>
                           </div>
                         </div>
                       </div>
@@ -1145,9 +1129,34 @@ export default function HowItWorks() {
                       With LumiqAI
                     </h3>
                     <div className="bg-green-50 rounded-2xl border border-green-200 p-6 h-full">
-                      <div className="bg-white rounded-xl p-8 mb-6 text-center border-2 border-dashed border-green-200">
-                        <Smartphone className="w-12 h-12 text-green-400 mx-auto mb-2" />
-                        <p className="font-sans text-sm text-green-500">Enhanced experience</p>
+                      <div className="mb-6">
+                        <p className="font-sans text-sm text-green-500 text-center mb-4">Enhanced experience</p>
+                        <div className="flex justify-center gap-3 sm:gap-4">
+                          {/* Consumer iPhone Mockup */}
+                          <div className="flex flex-col items-center flex-1 max-w-[140px] sm:max-w-[160px]">
+                            <div className="w-full h-[280px] sm:h-[320px] flex items-center justify-center">
+                              <img 
+                                src="/Santander Screenshots/How it Works/Deployment Flow — How a Customer /With Lumiq AI/Consumer.png"
+                                alt="Consumer with LumiqAI"
+                                className="w-full h-full object-contain drop-shadow-lg"
+                              />
+                            </div>
+                            <p className="text-sm text-gray-600 mt-3 font-semibold text-center">Consumer</p>
+                            <p className="text-xs text-green-500 text-center">Score + prequal</p>
+                          </div>
+                          {/* Business iPhone Mockup */}
+                          <div className="flex flex-col items-center flex-1 max-w-[140px] sm:max-w-[160px]">
+                            <div className="w-full h-[280px] sm:h-[320px] flex items-center justify-center">
+                              <img 
+                                src="/Santander Screenshots/How it Works/Deployment Flow — How a Customer /With Lumiq AI/Business.png"
+                                alt="Business with LumiqAI"
+                                className="w-full h-full object-contain drop-shadow-lg"
+                              />
+                            </div>
+                            <p className="text-sm text-gray-600 mt-3 font-semibold text-center">Business</p>
+                            <p className="text-xs text-green-500 text-center">Credit intelligence</p>
+                          </div>
+                        </div>
                       </div>
                       <div className="space-y-3">
                         {[
@@ -1406,7 +1415,7 @@ export default function HowItWorks() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 font-semibold px-8 py-6 text-lg rounded-xl"
+                  className="border-2 border-[#2D2D2D] bg-[#2D2D2D] text-white hover:bg-[#2D2D2D]/90 hover:text-white font-semibold px-8 py-6 text-lg rounded-xl"
                 >
                   Send Audit PDF
                 </Button>
