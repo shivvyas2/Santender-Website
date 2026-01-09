@@ -1,45 +1,28 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "@/context/ThemeProvider";
-import Index from "./pages/Index";
-import Revolution from "./pages/Revolution";
-import Impact from "./pages/Impact";
-import Demo from "./pages/Demo";
-import Pilot from "./pages/Pilot";
-import USS from "./pages/USS";
-import HowItWorks from "./pages/HowItWorks";
-import CaseStudy from "./pages/CaseStudy";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Features from './pages/Features'
+import Solutions from './pages/Solutions'
+import Contact from './pages/Contact'
+import SantanderPartner from './pages/SantanderPartner'
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <ThemeProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+function App() {
+  return (
+    <Router>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Header />
+        <main style={{ flex: 1 }}>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/revolution" element={<Revolution />} />
-            <Route path="/impact" element={<Impact />} />
-            <Route path="/demo" element={<Demo />} />
-            <Route path="/pilot" element={<Pilot />} />
-            <Route path="/uss" element={<USS />} />
-            <Route path="/how-it-works" element={<HowItWorks />} />
-            <Route path="/case-study" element={<CaseStudy />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<SantanderPartner />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </ThemeProvider>
-);
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  )
+}
 
-export default App;
-
+export default App

@@ -1,0 +1,92 @@
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-lumiq {
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.logo-separator {
+  color: #999;
+  font-weight: 300;
+}
+
+.logo-bank {
+  color: #EC0000;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #EC0000;
+}
+
+.nav-link-primary {
+  background: #EC0000;
+  color: white;
+  padding: 0.625rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link-primary:hover {
+  background: #cc0000;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(236, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+}
