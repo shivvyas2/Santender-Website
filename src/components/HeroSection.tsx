@@ -349,7 +349,7 @@ export function HeroSection() {
             </div>
 
             {/* iPhone Mockup with Screenshot */}
-            <div className="w-full max-w-[220px] sm:max-w-[260px]">
+            <div className="w-full max-w-[300px] sm:max-w-[380px]">
               <img 
                 src="/Santander Screenshots/Main Screen/Hero/Simulator Screenshot - iPhone 16 Pro - 2026-01-08 at 18.22.22.png"
                 alt="LumiqAI Credit Intelligence in Santander App"

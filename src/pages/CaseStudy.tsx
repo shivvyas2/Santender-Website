@@ -488,12 +488,12 @@ export default function CaseStudy() {
                     </div>
                     
                     {/* Phone mockups showing current state */}
-                    <div className="flex justify-center gap-2 sm:gap-3 mb-6">
+                    <div className="flex justify-center gap-3 sm:gap-4 mb-6">
                       <div className="flex flex-col items-center">
                         <img 
                           src="/2.png"
                           alt="Consumer app - no credit visibility"
-                          className="w-20 sm:w-24 h-auto drop-shadow-lg"
+                          className="w-44 sm:w-56 h-auto drop-shadow-xl"
                         />
                         <p className="text-xs text-red-500 mt-2 font-medium">Consumer</p>
                       </div>
@@ -501,7 +501,7 @@ export default function CaseStudy() {
                         <img 
                           src="/Santander Screenshots/Case Study/The Missing Credit Visibility Loop in Cards & SMB/The GAP/Without LumiqAI/business.png"
                           alt="Business app - no credit visibility"
-                          className="w-20 sm:w-24 h-auto drop-shadow-lg"
+                          className="w-44 sm:w-56 h-auto drop-shadow-xl"
                         />
                         <p className="text-xs text-red-500 mt-2 font-medium">Business</p>
                       </div>

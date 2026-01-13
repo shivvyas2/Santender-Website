@@ -273,22 +273,22 @@ function Index() {
               </div>
               <Card className="h-full bg-[#F7F7F7] border border-gray-200 overflow-hidden shadow-sm">
                 <CardContent className="p-4 sm:p-6 md:p-8 pt-8 sm:pt-10 md:pt-12">
-                  <div className="flex justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 overflow-hidden">
+                  <div className="flex justify-center gap-3 sm:gap-4 mb-4 sm:mb-6 md:mb-8 overflow-hidden">
                     <div className="flex flex-col items-center min-w-0 flex-1">
                       <img 
                         src="/2.png"
                         alt="Consumer app without LumiqAI"
-                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                        className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto drop-shadow-xl max-w-full"
                       />
-                      <p className="text-xs text-[#666666] mt-2 text-center">Consumer</p>
+                      <p className="text-sm text-[#666666] mt-3 text-center font-medium">Consumer</p>
                     </div>
                     <div className="flex flex-col items-center min-w-0 flex-1">
                       <img 
                         src="/Santander Screenshots/Main Screen/Two Realities/Without LumiqAI/business.png"
                         alt="Business app without LumiqAI"
-                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                        className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto drop-shadow-xl max-w-full"
                       />
-                      <p className="text-xs text-[#666666] mt-2 text-center">Business</p>
+                      <p className="text-sm text-[#666666] mt-3 text-center font-medium">Business</p>
                     </div>
                   </div>
                   <div className="space-y-3 sm:space-y-4">
@@ -322,22 +322,22 @@ function Index() {
               </div>
               <Card className="h-full bg-white border border-[#EC0000]/30 overflow-hidden shadow-sm">
                 <CardContent className="p-4 sm:p-6 md:p-8 pt-8 sm:pt-10 md:pt-12">
-                  <div className="flex justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 overflow-hidden">
+                  <div className="flex justify-center gap-3 sm:gap-4 mb-4 sm:mb-6 md:mb-8 overflow-hidden">
                     <div className="flex flex-col items-center min-w-0 flex-1">
                       <img 
                         src="/Santander Screenshots/Main Screen/Two Realities/With Lumiq AI/Consumer.png"
                         alt="Consumer app with LumiqAI"
-                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                        className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto drop-shadow-xl max-w-full"
                       />
-                      <p className="text-xs text-[#EC0000] mt-2 font-medium text-center">Consumer</p>
+                      <p className="text-sm text-[#EC0000] mt-3 font-medium text-center">Consumer</p>
                     </div>
                     <div className="flex flex-col items-center min-w-0 flex-1">
                       <img 
                         src="/Santander Screenshots/Main Screen/Two Realities/With Lumiq AI/Business.png"
                         alt="Business app with LumiqAI"
-                        className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto drop-shadow-lg max-w-full"
+                        className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto drop-shadow-xl max-w-full"
                       />
-                      <p className="text-xs text-[#EC0000] mt-2 font-medium text-center">Business</p>
+                      <p className="text-sm text-[#EC0000] mt-3 font-medium text-center">Business</p>
                     </div>
                   </div>
                   <div className="space-y-3 sm:space-y-4">

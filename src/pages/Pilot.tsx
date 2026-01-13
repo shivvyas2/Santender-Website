@@ -285,21 +285,21 @@ export default function Pilot() {
                 </div>
                 
                 <div className="border-b border-gray-200 overflow-hidden">
-                  <div className="flex justify-center gap-1 sm:gap-2 p-3 sm:p-4">
+                  <div className="flex justify-center gap-3 sm:gap-4 p-5 sm:p-6">
                     <img 
                       src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Consumer Pilot Scope/1.png"
                       alt="Consumer pilot screen 1"
-                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                      className="w-40 sm:w-52 h-auto drop-shadow-lg"
                     />
                     <img 
                       src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Consumer Pilot Scope/2.png"
                       alt="Consumer pilot screen 2"
-                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                      className="w-40 sm:w-52 h-auto drop-shadow-lg"
                     />
                     <img 
                       src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Consumer Pilot Scope/3.png"
                       alt="Consumer pilot screen 3"
-                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                      className="w-40 sm:w-52 h-auto drop-shadow-lg"
                     />
                   </div>
                 </div>
@@ -341,21 +341,21 @@ export default function Pilot() {
                 </div>
                 
                 <div className="border-b border-blue-100 overflow-hidden">
-                  <div className="flex justify-center gap-1 sm:gap-2 p-3 sm:p-4">
+                  <div className="flex justify-center gap-3 sm:gap-4 p-5 sm:p-6">
                     <img 
                       src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Business Pilot Scope/1.png"
                       alt="Business pilot screen 1"
-                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                      className="w-40 sm:w-52 h-auto drop-shadow-lg"
                     />
                     <img 
                       src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Business Pilot Scope/2.png"
                       alt="Business pilot screen 2"
-                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                      className="w-40 sm:w-52 h-auto drop-shadow-lg"
                     />
                     <img 
                       src="/Santander Screenshots/Pilot/Dual-Platform Credit Intelligence/Business Pilot Scope/3.png"
                       alt="Business pilot screen 3"
-                      className="w-20 sm:w-24 h-auto drop-shadow-md"
+                      className="w-40 sm:w-52 h-auto drop-shadow-lg"
                     />
                   </div>
                 </div>
