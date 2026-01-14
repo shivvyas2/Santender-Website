@@ -1131,30 +1131,30 @@ export default function HowItWorks() {
                     <div className="bg-green-50 rounded-2xl border border-green-200 p-6 h-full">
                       <div className="mb-6">
                         <p className="font-sans text-sm text-green-500 text-center mb-4">Enhanced experience</p>
-                        <div className="flex justify-center gap-4 sm:gap-6">
+                        <div className="flex justify-center gap-5 sm:gap-8">
                           {/* Consumer iPhone Mockup */}
-                          <div className="flex flex-col items-center flex-1 max-w-[220px] sm:max-w-[280px]">
-                            <div className="w-full h-[460px] sm:h-[580px] flex items-center justify-center">
+                          <div className="flex flex-col items-center flex-1 max-w-[260px] sm:max-w-[340px]">
+                            <div className="w-full h-[540px] sm:h-[700px] flex items-center justify-center">
                               <img 
                                 src="/Santander Screenshots/How it Works/Deployment Flow — How a Customer /With Lumiq AI/Consumer.png"
                                 alt="Consumer with LumiqAI"
-                                className="w-full h-full object-contain drop-shadow-xl"
+                                className="w-full h-full object-contain drop-shadow-2xl"
                               />
                             </div>
-                            <p className="text-sm text-gray-600 mt-3 font-semibold text-center">Consumer</p>
-                            <p className="text-xs text-green-500 text-center">Score + prequal</p>
+                            <p className="text-base text-gray-600 mt-4 font-semibold text-center">Consumer</p>
+                            <p className="text-sm text-green-500 text-center font-medium">Score + prequal</p>
                           </div>
                           {/* Business iPhone Mockup */}
-                          <div className="flex flex-col items-center flex-1 max-w-[220px] sm:max-w-[280px]">
-                            <div className="w-full h-[460px] sm:h-[580px] flex items-center justify-center">
+                          <div className="flex flex-col items-center flex-1 max-w-[260px] sm:max-w-[340px]">
+                            <div className="w-full h-[540px] sm:h-[700px] flex items-center justify-center">
                               <img 
                                 src="/Santander Screenshots/How it Works/Deployment Flow — How a Customer /With Lumiq AI/Business.png"
                                 alt="Business with LumiqAI"
-                                className="w-full h-full object-contain drop-shadow-xl"
+                                className="w-full h-full object-contain drop-shadow-2xl"
                               />
                             </div>
-                            <p className="text-sm text-gray-600 mt-3 font-semibold text-center">Business</p>
-                            <p className="text-xs text-green-500 text-center">Credit intelligence</p>
+                            <p className="text-base text-gray-600 mt-4 font-semibold text-center">Business</p>
+                            <p className="text-sm text-green-500 text-center font-medium">Credit intelligence</p>
                           </div>
                         </div>
                       </div>
