@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import { PageLayout } from "@/components/PageLayout";
+
+// EmailJS Public Key
+const EMAILJS_PUBLIC_KEY = "3sQt_CDIT_J4t7dTm";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -41,11 +45,99 @@ export default function Contact() {
     country: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+      setSubmitStatus("error");
+      setErrorMessage("Please fill in all required fields (First name, Last name, Email, and Message).");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setErrorMessage("");
+
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        fullName: `${formData.firstName} ${formData.lastName}`.trim(),
+        company: formData.company || "Not provided",
+        email: formData.email,
+        phone: formData.phone || "Not provided",
+        country: formData.country || "Not provided",
+        message: formData.message,
+        time: new Date().toLocaleString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          timeZoneName: "short"
+        })
+      };
+
+      console.log("Sending email with params:", templateParams);
+
+      // Send email via EmailJS
+      const response = await emailjs.send(
+        "service_xfyl449", // Service ID
+        "template_xtof4cg", // Template ID
+        templateParams
+      );
+
+      console.log("EmailJS response:", response);
+
+      if (response.status === 200) {
+        setSubmitStatus("success");
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          company: "",
+          email: "",
+          phone: "",
+          country: "",
+          message: ""
+        });
+      } else {
+        throw new Error(`EmailJS returned status: ${response.status}`);
+      }
+    } catch (error: any) {
+      console.error("EmailJS error details:", error);
+      console.error("Full error object:", JSON.stringify(error, null, 2));
+      
+      const errorMsg = error?.text || error?.message || error?.toString() || "Unknown error occurred";
+      console.error("Error message:", errorMsg);
+      
+      setSubmitStatus("error");
+      
+      // More specific error messages
+      if (error?.text?.includes("Invalid") || error?.text?.includes("not found")) {
+        setErrorMessage("Invalid service or template ID. Please verify service_xfyl449 and template_xtof4cg are correct in your EmailJS dashboard.");
+      } else if (error?.text?.includes("Failed") || error?.status === 0) {
+        setErrorMessage("Network error. Please check your internet connection and try again.");
+      } else if (error?.text?.includes("public key") || error?.text?.includes("unauthorized")) {
+        setErrorMessage("EmailJS authentication failed. You may need to add your public key. Check the browser console for details.");
+      } else {
+        setErrorMessage(`Error: ${errorMsg}. Check browser console (F12) for more details.`);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -156,11 +248,36 @@ export default function Contact() {
 
                     <Button 
                       type="submit"
-                      className="w-full h-14 bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold text-base rounded-lg flex items-center justify-between px-6"
+                      disabled={isSubmitting}
+                      className="w-full h-14 bg-[#EC0000] hover:bg-[#CC0000] text-white font-semibold text-base rounded-lg flex items-center justify-between px-6 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <span>Submit</span>
-                      <ArrowRight className="w-5 h-5" />
+                      <span>{isSubmitting ? "Submitting..." : "Submit"}</span>
+                      {!isSubmitting && <ArrowRight className="w-5 h-5" />}
                     </Button>
+
+                    {/* Status Messages */}
+                    {submitStatus === "success" && (
+                      <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <p className="text-green-700 text-sm font-medium text-center">
+                          ✓ Thank you! Your message has been sent successfully. We'll be in touch soon.
+                        </p>
+                      </div>
+                    )}
+                    {submitStatus === "error" && (
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                        <p className="text-red-700 text-sm font-medium text-center mb-2">
+                          ✗ Something went wrong. Please try again or contact us directly.
+                        </p>
+                        {errorMessage && (
+                          <p className="text-red-600 text-xs text-center mt-2">
+                            {errorMessage}
+                          </p>
+                        )}
+                        <p className="text-red-500 text-xs text-center mt-3">
+                          Check browser console for more details.
+                        </p>
+                      </div>
+                    )}
                   </form>
 
                   <p className="text-sm text-[#888888] mt-6 font-sans text-center">
